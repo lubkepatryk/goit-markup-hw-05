@@ -27,7 +27,7 @@
           >
           <ul class="list">
             <li>
-              <a href="./" class="link">Agencja</a>
+              <a href="./" class="link highlight">Agencja</a>
             </li>
             <li>
               <a href="./portfolio.html" class="link">Portfolio</a>
@@ -42,7 +42,8 @@
             <li>
               <a href="mailto:info@devstudio.com" class="link contact"
                 ><svg class="icon-envelope" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
+                  <use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a
+              >
             </li>
             <li>
               <a href="tel:+48111111111" class="link contact"
@@ -58,7 +59,16 @@
       <section class="main-section">
         <div class="container">
           <h1 class="main-header">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="button1" type="button">Zamów usługe</button>
+          <button class="button1" type="button" data-modal-open>
+            Zamów usługę
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-button" type="button" data-modal-close>
+                <img src="./svg/close.svg" alt="close button" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <div class="container section">
@@ -117,29 +127,32 @@
       <section class="container section">
         <h2 class="second-header">Czym się zajmujemy</h2>
         <ul class="list">
-          <li>
+          <li class="thumb">
             <img
               src="./images/box1.jpg"
               alt="zbliżenie na programistę pracującego przy biurku"
               width="370"
               height="294"
             />
+            <p class="label">Aplikacje komputerowe</p>
           </li>
-          <li>
+          <li class="thumb">
             <img
               src="./images/box2.jpg"
               alt="programista pracujący nad projektem aplikacji mobilnej"
               width="370"
               height="294"
             />
+            <p class="label">Aplikacje mobilne</p>
           </li>
-          <li>
+          <li class="thumb">
             <img
               src="./images/box3.jpg"
               alt="grafik wybierający barwy z palety na tablecie"
               width="370"
               height="294"
             />
+            <p class="label">Rozwiązania graficzne</p>
           </li>
         </ul>
       </section>
@@ -349,5 +362,6 @@
         </div>
       </div>
     </footer>
+    <script src="./JS/modal.js"></script>
   </body>
 </html>

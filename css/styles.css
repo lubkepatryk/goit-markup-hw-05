@@ -289,6 +289,10 @@ ul {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.item > img {
+  display: block;
+}
+
 .item:hover .overlay {
   transform: translateY(0);
 }
@@ -346,24 +350,26 @@ ul {
 }
 
 .icon-envelope {
-  --color2: var(--secondary-font-color);
+  stroke: var(--secondary-font-color);
+  fill: var(--secondary-font-color);
   margin-right: 10px;
 }
 
 .icon-smartphone {
-  --color5: var(--secondary-font-color);
+  stroke: var(--secondary-font-color);
+  fill: var(--secondary-font-color);
   margin-right: 10px;
 }
 
 .link svg {
-  transition: --color2 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    --color5 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover svg,
 .link:focus svg {
-  --color2: var(--brand-color);
-  --color5: var(--brand-color);
+  stroke: var(--brand-color);
+  fill: var(--brand-color);
 }
 
 .icon-antenna1,
@@ -381,7 +387,8 @@ ul {
 }
 
 .icon-social {
-  --color3: var(--icons-color);
+  stroke: var(--icons-color);
+  fill: var(--icons-color);
 }
 
 .socials {
@@ -408,27 +415,26 @@ ul {
 }
 
 .circle svg {
-  transition: --color4 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    --color3 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .circle:hover svg,
 .circle:focus svg {
-  --color4: #ffffff;
-  --color3: #ffffff;
+  fill: #ffffff;
+  stroke: #fff;
   cursor: pointer;
 }
 
 .icon-logo {
-  --color4: var(--icons-color);
-  --color2: var(--icons-color);
+  /* stroke: var(--icons-color); */
+  fill: var(--icons-color);
   border: 1px solid var(--icons-color);
   border-radius: 4px;
   padding: 15px 31px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    --color4 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    --color2 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -442,8 +448,7 @@ ul {
 .icon-logo:hover,
 .icon-logo:focus {
   border: 1px solid var(--brand-color);
-  --color4: var(--brand-color);
-  --color2: var(--brand-color);
+  fill: var(--brand-color);
   cursor: pointer;
 }
 
@@ -534,7 +539,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: transform 1s;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
